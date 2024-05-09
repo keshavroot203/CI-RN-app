@@ -11,7 +11,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 16.x
-
+    - name: Run Jest tests
+      run: npm test
+      
     - name: Cache npm dependencies
       uses: actions/cache@v2
       with:
@@ -30,5 +32,4 @@ jobs:
         name: android-apk
         path: '**/*.apk'
 
-    - name: Run Jest tests
-      run: npm test
+   
