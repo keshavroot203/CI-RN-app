@@ -7,12 +7,18 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js v20
+    - name: Use Node.js v16
       uses: actions/setup-node@v1
       with:
-        node-version: 20.12.2
+        node-version: 16.x
     - name: Run Jest tests
       run: npm test
+    - name: Check npm version
+      run: npm --version
+
+    - name: List installed npm packages
+      run: npm list --depth=0
+
 
     - name: Cache npm dependencies
       uses: actions/cache@v2
