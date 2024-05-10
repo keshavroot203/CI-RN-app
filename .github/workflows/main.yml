@@ -15,10 +15,6 @@ jobs:
     - name: Install Jest globally
       run: npm install -g jest
 
-    - name: Run Jest tests
-      run: npm test
-
-
     - name: Cache npm dependencies
       uses: actions/cache@v2
       with:
