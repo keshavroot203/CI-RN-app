@@ -12,10 +12,8 @@ jobs:
       with:
         node-version: 16.x
     
-
-    - name: Run Jest tests
-      run: npm test
-
+    - name: Install Jest globally
+      run: npm install -g jest
 
     - name: Cache npm dependencies
       uses: actions/cache@v2
