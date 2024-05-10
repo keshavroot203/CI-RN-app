@@ -12,11 +12,7 @@ jobs:
       with:
         node-version: 16.x
     
-    - name: Check npm version
-      run: npm --version
 
-    - name: List installed npm packages
-      run: npm list --depth=0
     - name: Run Jest tests
       run: npm test
 
